@@ -7,8 +7,36 @@ local module = {}
 local eps = 1e-9
 local cloneref = cloneref or function(ref) return ref end
 local tweenService = cloneref(game:GetService('TweenService'))
+local statsService = cloneref(game:GetService('Stats'))
+
+-- Acceleration tracking: stores {velocity, timestamp} per target rootpart reference
+local velocityHistory = setmetatable({}, { __mode = 'k' })
+
 local function isZero(d)
 	return (d > -eps and d < eps)
+end
+
+-- Returns the local player's network ping in seconds
+local function getPing()
+	local ok, ping = pcall(function()
+		return statsService.Network.ServerStatsItem['Data Ping']:GetValue()
+	end)
+	return (ok and ping or 0) / 1000
+end
+
+-- Returns the current acceleration vector for a target part, and stores history
+local function getAcceleration(rootPart, currentVelocity)
+	local now = os.clock()
+	local history = velocityHistory[rootPart]
+	local accel = Vector3.zero
+	if history then
+		local dt = now - history.t
+		if dt > 0 and dt < 0.5 then
+			accel = (currentVelocity - history.v) / dt
+		end
+	end
+	velocityHistory[rootPart] = { v = currentVelocity, t = now }
+	return accel
 end
 
 local tracer = Instance.new('Part')
@@ -236,45 +264,108 @@ function module.SpawnArcTracer(origin, aimDirection, projectileSpeed, gravity, t
     end
 	task.delay(custom.Lifetime, model.Destroy, model)
 end
-function module.SolveTrajectory(origin, projectileSpeed, gravity, targetPos, targetVelocity, playerGravity, playerHeight, playerJump, params)
-	local disp = targetPos - origin
-	local p, q, r = targetVelocity.X, targetVelocity.Y, targetVelocity.Z
-	local h, j, k = disp.X, disp.Y, disp.Z
-	local l = -.5 * gravity
+-- SolveTrajectory: upgraded with ping compensation, kinematic gravity, and acceleration tracking
+-- rootPart (optional) - pass the target's RootPart instance to enable acceleration tracking
+function module.SolveTrajectory(origin, projectileSpeed, gravity, targetPos, targetVelocity, playerGravity, playerHeight, playerJump, params, rootPart, pingOverride)
+	-- ── 1. PING COMPENSATION ──────────────────────────────────────────────────
+	-- Extrapolate the target's position forward by our latency so the server
+	-- sees them where we're aiming, not where we saw them on our client.
+	local ping = pingOverride or getPing()
 
-	local f = workspace:Raycast(targetPos, Vector3.new(0, -playerHeight - 0.5, 0), params)
-	if f ~= nil and q <= 0.1 then
-		q = -(targetPos.Y - f.Position.Y)
+	-- ── 2. ACCELERATION / CURVE TRACKING ─────────────────────────────────────
+	-- If we have the actual RootPart, we can compute how fast velocity is
+	-- changing (i.e. they're turning or juking) and account for the curve.
+	local accel = Vector3.zero
+	if rootPart then
+		accel = getAcceleration(rootPart, targetVelocity)
+		-- Clamp acceleration magnitude so extreme jank doesn't throw us off
+		local accelMag = accel.Magnitude
+		if accelMag > 150 then
+			accel = accel * (150 / accelMag)
+		end
 	end
 
-	--attemped gravity calculation, may return to it in the future.
-	if math.abs(q) > 0.01 and playerGravity and playerGravity > 0 then
-		local estTime = (disp.Magnitude / projectileSpeed)
-		local origq = q
-		local origj = j
-		for i = 1, 100 do
-			q -= (.5 * playerGravity) * estTime
-			local velo = targetVelocity * 0.016
-			local ray = workspace.Raycast(workspace, Vector3.new(targetPos.X, targetPos.Y, targetPos.Z), Vector3.new(velo.X, (q * estTime) - playerHeight, velo.Z), params)
-			if ray then
-				local newTarget = ray.Position + Vector3.new(0, playerHeight, 0)
-				estTime -= math.sqrt(((targetPos - newTarget).Magnitude * 2) / playerGravity)
-				targetPos = newTarget
-				j = (targetPos - origin).Y
-				q = 0
-				break
-			else
-				break
+	-- Apply ping extrapolation + half-acceleration nudge for curved paths.
+	-- pos(t) = p₀ + v₀t + ½at²  — evaluated at t=ping for the initial nudge
+	local pingPos = targetPos
+		+ targetVelocity * ping
+		+ 0.5 * accel * (ping * ping)
+
+	-- ── 3. FLOOR / GROUNDED CHECK ─────────────────────────────────────────────
+	-- If the target is on the ground (and not jumping), zero out vertical vel
+	-- so we don't shoot under the floor.
+	local adjustedVelocity = targetVelocity
+	local floorRay = workspace:Raycast(pingPos, Vector3.new(0, -(playerHeight or 2) - 0.5, 0), params)
+	if floorRay and adjustedVelocity.Y <= 0.1 then
+		adjustedVelocity = Vector3.new(adjustedVelocity.X, 0, adjustedVelocity.Z)
+		pingPos = Vector3.new(pingPos.X, floorRay.Position.Y + (playerHeight or 2), pingPos.Z)
+	end
+
+	-- ── 4. KINEMATIC GRAVITY PREDICTION ─────────────────────────────────────
+	-- Replaces the old broken loop. If the target is airborne (Y velocity != 0
+	-- and playerGravity is set), we iteratively refine the intercept point
+	-- by solving where the target will be when the projectile arrives.
+	-- We do 3 passes which converges fast enough for any realistic scenario.
+	if math.abs(adjustedVelocity.Y) > 0.1 and playerGravity and playerGravity > 0 then
+		-- Rough initial time estimate: straight-line distance over speed
+		local estimatedTime = (pingPos - origin).Magnitude / projectileSpeed
+
+		for _ = 1, 3 do
+			-- Kinematic: target's predicted Y pos at estimatedTime
+			-- posY = startY + vy*t - ½*g*t²
+			local predictedY = pingPos.Y
+				+ adjustedVelocity.Y * estimatedTime
+				- 0.5 * playerGravity * (estimatedTime * estimatedTime)
+
+			local predictedPos = Vector3.new(
+				pingPos.X + adjustedVelocity.X * estimatedTime + 0.5 * accel.X * (estimatedTime * estimatedTime),
+				predictedY,
+				pingPos.Z + adjustedVelocity.Z * estimatedTime + 0.5 * accel.Z * (estimatedTime * estimatedTime)
+			)
+
+			-- Floor clamp — don't predict them below the ground
+			local floorCheck = workspace:Raycast(
+				predictedPos + Vector3.new(0, 2, 0),
+				Vector3.new(0, -(playerHeight or 2) - 4, 0),
+				params
+			)
+			if floorCheck then
+				predictedPos = Vector3.new(
+					predictedPos.X,
+					floorCheck.Position.Y + (playerHeight or 2),
+					predictedPos.Z
+				)
+			end
+
+			-- Refine the time estimate using the new predicted distance
+			estimatedTime = (predictedPos - origin).Magnitude / projectileSpeed
+
+			-- On the last pass, commit the predicted position as our new target
+			if _ == 3 then
+				pingPos = predictedPos
+				-- zero out Y velocity since we've baked it into the position
+				adjustedVelocity = Vector3.new(adjustedVelocity.X, 0, adjustedVelocity.Z)
 			end
 		end
 	end
 
+	-- ── 5. SOLVE THE QUARTIC ──────────────────────────────────────────────────
+	-- Now solve for the exact intercept time using the projectile physics equation.
+	-- We factor in the remaining (horizontal) velocity of the target and gravity
+	-- drop of the projectile simultaneously.
+	local disp = pingPos - origin
+	local p = adjustedVelocity.X + accel.X * 0.016
+	local q = adjustedVelocity.Y
+	local r = adjustedVelocity.Z + accel.Z * 0.016
+	local h, j, k = disp.X, disp.Y, disp.Z
+	local l = -0.5 * gravity
+
 	local solutions = module.solveQuartic(
-		l*l,
-		-2*q*l,
-		q*q - 2*j*l - projectileSpeed*projectileSpeed + p*p + r*r,
-		2*j*q + 2*h*p + 2*k*r,
-		j*j + h*h + k*k
+		l * l,
+		-2 * q * l,
+		q * q - 2 * j * l - projectileSpeed * projectileSpeed + p * p + r * r,
+		2 * j * q + 2 * h * p + 2 * k * r,
+		j * j + h * h + k * k
 	)
 
 	if solutions then
@@ -284,22 +375,26 @@ function module.SolveTrajectory(origin, projectileSpeed, gravity, targetPos, tar
 				bestT = v
 			end
 		end
-	
+
 		if bestT < math.huge then
 			local t = bestT
 			local d = (h + p * t) / t
 			local e = (j + q * t - l * t * t) / t
-			local f2 = (k + r * t) / t
-			local aimDir = Vector3.new(d, e, f2).Unit
-			return origin + Vector3.new(d, e, f2), aimDir, t
+			local f = (k + r * t) / t
+			local aimDir = Vector3.new(d, e, f).Unit
+			return origin + Vector3.new(d, e, f), aimDir, t
 		end
 	elseif gravity == 0 then
-		local t = (disp.Magnitude / projectileSpeed)
-		local d = (h + p*t)/t
-		local e = (j + q*t - l*t*t)/t
-		local f = (k + r*t)/t
+		local t = disp.Magnitude / projectileSpeed
+		local d = (h + p * t) / t
+		local e = (j + q * t - l * t * t) / t
+		local f = (k + r * t) / t
 		return origin + Vector3.new(d, e, f)
 	end
 end
 
+-- Expose the velocity history table so callers can flush stale entries if needed
+module.VelocityHistory = velocityHistory
+
 return module
+
