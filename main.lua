@@ -54,7 +54,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		warn(path)
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/Yodaveey/PrivateSky/'..readfile('catrewrite/profiles/commit.txt')..'/'..select(1, path:gsub('catrewrite/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/Yodaveey/PrivateSky/'..readfile('SkyVape/profiles/commit.txt')..'/'..select(1, path:gsub('SkyVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			task.spawn(error, res)
@@ -85,7 +85,7 @@ local function finishLoading()
 			teleportedServers = true
 			local teleportScript = [[
 				if shared.VapeDeveloper then
-					loadstring(readfile('catrewrite/main.lua'), 'main')(_scriptconfig)
+					loadstring(readfile('SkyVape/main.lua'), 'main')(_scriptconfig)
 				else
 					loadstring(game:HttpGet('https://api.catvape.dev/script?key=_key'), 'init')(_scriptconfig)
 				end
@@ -120,27 +120,27 @@ local function finishLoading()
 			vape:CreateNotification('Finished Loading', (getgenv().catname and `Authenticated as {getgenv().catname} with {getgenv().catrole}, ` or '').. (vape.VapeButton and 'Press the button in the top right' or 'Press '..table.concat(vape.Keybind, ' + '):upper())..' to open GUI', 5)
 			task.delay(1, function()
 				if shared.updated then
-					vape:CreateNotification('Cat', `Script has updated from {shared.updated} to {readfile('catrewrite/profiles/commit.txt')}`, 10, 'info')
+					vape:CreateNotification('Cat', `Script has updated from {shared.updated} to {readfile('SkyVape/profiles/commit.txt')}`, 10, 'info')
 				end
 			end)
 		end
 	end
 end
 
-if not isfile('catrewrite/profiles/gui.txt') then
-	writefile('catrewrite/profiles/gui.txt', 'new')
+if not isfile('SkyVape/profiles/gui.txt') then
+	writefile('SkyVape/profiles/gui.txt', 'new')
 end
-local gui = 'new'--readfile('catrewrite/profiles/gui.txt')
+local gui = 'new'--readfile('SkyVape/profiles/gui.txt')
 
-if not isfolder('catrewrite/assets/'..gui) then
-	makefolder('catrewrite/assets/'..gui)
+if not isfolder('SkyVape/assets/'..gui) then
+	makefolder('SkyVape/assets/'..gui)
 end
-if not isfile('catrewrite/profiles/commit.txt') then
-	writefile('catrewrite/profiles/commit.txt', 'main')
+if not isfile('SkyVape/profiles/commit.txt') then
+	writefile('SkyVape/profiles/commit.txt', 'main')
 end
 
 getgenv().used_init = true
-vape = loadstring(downloadFile('catrewrite/guis/'..gui..'.lua'), 'gui')(license)
+vape = loadstring(downloadFile('SkyVape/guis/'..gui..'.lua'), 'gui')(license)
 _G.vape = vape
 shared.vape = vape
 
@@ -151,20 +151,20 @@ if shared.maincat then
 end
 
 if not shared.VapeIndependent then
-	loadstring(downloadFile('catrewrite/games/universal.lua'), 'universal')(license)
-	if isfile('catrewrite/games/'..game.PlaceId..'.lua') then
-		loadstring(readfile('catrewrite/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
+	loadstring(downloadFile('SkyVape/games/universal.lua'), 'universal')(license)
+	if isfile('SkyVape/games/'..game.PlaceId..'.lua') then
+		loadstring(readfile('SkyVape/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
 	else
 		if not shared.VapeDeveloper then
 			local suc, res = pcall(function()
-				return game:HttpGet('https://raw.githubusercontent.com/Yodaveey/PrivateSky/'..readfile('catrewrite/profiles/commit.txt')..'/games/'..game.PlaceId..'.lua', true)
+				return game:HttpGet('https://raw.githubusercontent.com/Yodaveey/PrivateSky/'..readfile('SkyVape/profiles/commit.txt')..'/games/'..game.PlaceId..'.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
-				loadstring(downloadFile('catrewrite/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
+				loadstring(downloadFile('SkyVape/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
 			end
 		end
 	end
-	loadstring(downloadFile('catrewrite/libraries/premium.lua'), 'premium')(license)
+	loadstring(downloadFile('SkyVape/libraries/premium.lua'), 'premium')(license)
 	finishLoading()
 else
 	vape.Init = finishLoading

@@ -62,69 +62,69 @@ local uipallet = {
 }
 
 local getcustomassets = {
-	['catrewrite/assets/new/add.png'] = 'rbxassetid://14368300605',
-	['catrewrite/assets/new/alert.png'] = 'rbxassetid://14368301329',
-	['catrewrite/assets/new/allowedicon.png'] = 'rbxassetid://14368302000',
-	['catrewrite/assets/new/allowedtab.png'] = 'rbxassetid://14368302875',
-	['catrewrite/assets/new/arrowmodule.png'] = 'rbxassetid://14473354880',
-	['catrewrite/assets/new/back.png'] = 'rbxassetid://14368303894',
-	['catrewrite/assets/new/bind.png'] = 'rbxassetid://14368304734',
-	['catrewrite/assets/new/bindbkg.png'] = 'rbxassetid://14368305655',
-	['catrewrite/assets/new/blatanticon.png'] = 'rbxassetid://14368306745',
-	['catrewrite/assets/new/blockedicon.png'] = 'rbxassetid://14385669108',
-	['catrewrite/assets/new/blockedtab.png'] = 'rbxassetid://14385672881',
-	['catrewrite/assets/new/blur.png'] = 'rbxassetid://14898786664',
-	['catrewrite/assets/new/blurnotif.png'] = 'rbxassetid://16738720137',
-	['catrewrite/assets/new/close.png'] = 'rbxassetid://14368309446',
-	['catrewrite/assets/new/closemini.png'] = 'rbxassetid://14368310467',
-	['catrewrite/assets/new/colorpreview.png'] = 'rbxassetid://14368311578',
-	['catrewrite/assets/new/combaticon.png'] = 'rbxassetid://14368312652',
-	['catrewrite/assets/new/customsettings.png'] = 'rbxassetid://14403726449',
-	['catrewrite/assets/new/discord.png'] = '',
-	['catrewrite/assets/new/dots.png'] = 'rbxassetid://14368314459',
-	['catrewrite/assets/new/edit.png'] = 'rbxassetid://14368315443',
-	['catrewrite/assets/new/expandicon.png'] = 'rbxassetid://14368353032',
-	['catrewrite/assets/new/expandright.png'] = 'rbxassetid://14368316544',
-	['catrewrite/assets/new/expandup.png'] = 'rbxassetid://14368317595',
-	['catrewrite/assets/new/friendstab.png'] = 'rbxassetid://14397462778',
-	['catrewrite/assets/new/guisettings.png'] = 'rbxassetid://14368318994',
-	['catrewrite/assets/new/guislider.png'] = 'rbxassetid://14368320020',
-	['catrewrite/assets/new/guisliderrain.png'] = 'rbxassetid://14368321228',
-	['catrewrite/assets/new/guiv4.png'] = 'rbxassetid://14368322199',
-	['catrewrite/assets/new/guivape.png'] = 'rbxassetid://14657521312',
-	['catrewrite/assets/new/info.png'] = 'rbxassetid://14368324807',
-	['catrewrite/assets/new/inventoryicon.png'] = 'rbxassetid://14928011633',
-	['catrewrite/assets/new/legit.png'] = 'rbxassetid://14425650534',
-	['catrewrite/assets/new/legittab.png'] = 'rbxassetid://14426740825',
-	['catrewrite/assets/new/miniicon.png'] = 'rbxassetid://14368326029',
-	['catrewrite/assets/new/notification.png'] = 'rbxassetid://16738721069',
-	['catrewrite/assets/new/overlaysicon.png'] = 'rbxassetid://14368339581',
-	['catrewrite/assets/new/overlaystab.png'] = 'rbxassetid://14397380433',
-	['catrewrite/assets/new/pin.png'] = 'rbxassetid://14368342301',
-	['catrewrite/assets/new/profilesicon.png'] = 'rbxassetid://14397465323',
-	['catrewrite/assets/new/radaricon.png'] = 'rbxassetid://14368343291',
-	['catrewrite/assets/new/rainbow_1.png'] = 'rbxassetid://14368344374',
-	['catrewrite/assets/new/rainbow_2.png'] = 'rbxassetid://14368345149',
-	['catrewrite/assets/new/rainbow_3.png'] = 'rbxassetid://14368345840',
-	['catrewrite/assets/new/rainbow_4.png'] = 'rbxassetid://14368346696',
-	['catrewrite/assets/new/range.png'] = 'rbxassetid://14368347435',
-	['catrewrite/assets/new/rangearrow.png'] = 'rbxassetid://14368348640',
-	['catrewrite/assets/new/rendericon.png'] = 'rbxassetid://14368350193',
-	['catrewrite/assets/new/rendertab.png'] = 'rbxassetid://14397373458',
-	['catrewrite/assets/new/search.png'] = 'rbxassetid://14425646684',
-	['catrewrite/assets/new/targetinfoicon.png'] = 'rbxassetid://14368354234',
-	['catrewrite/assets/new/targetnpc1.png'] = 'rbxassetid://14497400332',
-	['catrewrite/assets/new/targetnpc2.png'] = 'rbxassetid://14497402744',
-	['catrewrite/assets/new/targetplayers1.png'] = 'rbxassetid://14497396015',
-	['catrewrite/assets/new/targetplayers2.png'] = 'rbxassetid://14497397862',
-	['catrewrite/assets/new/targetstab.png'] = 'rbxassetid://14497393895',
-	['catrewrite/assets/new/textguiicon.png'] = 'rbxassetid://14368355456',
-	['catrewrite/assets/new/textv4.png'] = 'rbxassetid://14368357095',
-	['catrewrite/assets/new/textvape.png'] = 'rbxassetid://14368358200',
-	['catrewrite/assets/new/utilityicon.png'] = 'rbxassetid://14368359107',
-	['catrewrite/assets/new/vape.png'] = 'rbxassetid://14373395239',
-	['catrewrite/assets/new/warning.png'] = 'rbxassetid://14368361552',
-	['catrewrite/assets/new/worldicon.png'] = 'rbxassetid://14368362492'
+	['SkyVape/assets/new/add.png'] = 'rbxassetid://14368300605',
+	['SkyVape/assets/new/alert.png'] = 'rbxassetid://14368301329',
+	['SkyVape/assets/new/allowedicon.png'] = 'rbxassetid://14368302000',
+	['SkyVape/assets/new/allowedtab.png'] = 'rbxassetid://14368302875',
+	['SkyVape/assets/new/arrowmodule.png'] = 'rbxassetid://14473354880',
+	['SkyVape/assets/new/back.png'] = 'rbxassetid://14368303894',
+	['SkyVape/assets/new/bind.png'] = 'rbxassetid://14368304734',
+	['SkyVape/assets/new/bindbkg.png'] = 'rbxassetid://14368305655',
+	['SkyVape/assets/new/blatanticon.png'] = 'rbxassetid://14368306745',
+	['SkyVape/assets/new/blockedicon.png'] = 'rbxassetid://14385669108',
+	['SkyVape/assets/new/blockedtab.png'] = 'rbxassetid://14385672881',
+	['SkyVape/assets/new/blur.png'] = 'rbxassetid://14898786664',
+	['SkyVape/assets/new/blurnotif.png'] = 'rbxassetid://16738720137',
+	['SkyVape/assets/new/close.png'] = 'rbxassetid://14368309446',
+	['SkyVape/assets/new/closemini.png'] = 'rbxassetid://14368310467',
+	['SkyVape/assets/new/colorpreview.png'] = 'rbxassetid://14368311578',
+	['SkyVape/assets/new/combaticon.png'] = 'rbxassetid://14368312652',
+	['SkyVape/assets/new/customsettings.png'] = 'rbxassetid://14403726449',
+	['SkyVape/assets/new/discord.png'] = '',
+	['SkyVape/assets/new/dots.png'] = 'rbxassetid://14368314459',
+	['SkyVape/assets/new/edit.png'] = 'rbxassetid://14368315443',
+	['SkyVape/assets/new/expandicon.png'] = 'rbxassetid://14368353032',
+	['SkyVape/assets/new/expandright.png'] = 'rbxassetid://14368316544',
+	['SkyVape/assets/new/expandup.png'] = 'rbxassetid://14368317595',
+	['SkyVape/assets/new/friendstab.png'] = 'rbxassetid://14397462778',
+	['SkyVape/assets/new/guisettings.png'] = 'rbxassetid://14368318994',
+	['SkyVape/assets/new/guislider.png'] = 'rbxassetid://14368320020',
+	['SkyVape/assets/new/guisliderrain.png'] = 'rbxassetid://14368321228',
+	['SkyVape/assets/new/guiv4.png'] = 'rbxassetid://14368322199',
+	['SkyVape/assets/new/guivape.png'] = 'rbxassetid://14657521312',
+	['SkyVape/assets/new/info.png'] = 'rbxassetid://14368324807',
+	['SkyVape/assets/new/inventoryicon.png'] = 'rbxassetid://14928011633',
+	['SkyVape/assets/new/legit.png'] = 'rbxassetid://14425650534',
+	['SkyVape/assets/new/legittab.png'] = 'rbxassetid://14426740825',
+	['SkyVape/assets/new/miniicon.png'] = 'rbxassetid://14368326029',
+	['SkyVape/assets/new/notification.png'] = 'rbxassetid://16738721069',
+	['SkyVape/assets/new/overlaysicon.png'] = 'rbxassetid://14368339581',
+	['SkyVape/assets/new/overlaystab.png'] = 'rbxassetid://14397380433',
+	['SkyVape/assets/new/pin.png'] = 'rbxassetid://14368342301',
+	['SkyVape/assets/new/profilesicon.png'] = 'rbxassetid://14397465323',
+	['SkyVape/assets/new/radaricon.png'] = 'rbxassetid://14368343291',
+	['SkyVape/assets/new/rainbow_1.png'] = 'rbxassetid://14368344374',
+	['SkyVape/assets/new/rainbow_2.png'] = 'rbxassetid://14368345149',
+	['SkyVape/assets/new/rainbow_3.png'] = 'rbxassetid://14368345840',
+	['SkyVape/assets/new/rainbow_4.png'] = 'rbxassetid://14368346696',
+	['SkyVape/assets/new/range.png'] = 'rbxassetid://14368347435',
+	['SkyVape/assets/new/rangearrow.png'] = 'rbxassetid://14368348640',
+	['SkyVape/assets/new/rendericon.png'] = 'rbxassetid://14368350193',
+	['SkyVape/assets/new/rendertab.png'] = 'rbxassetid://14397373458',
+	['SkyVape/assets/new/search.png'] = 'rbxassetid://14425646684',
+	['SkyVape/assets/new/targetinfoicon.png'] = 'rbxassetid://14368354234',
+	['SkyVape/assets/new/targetnpc1.png'] = 'rbxassetid://14497400332',
+	['SkyVape/assets/new/targetnpc2.png'] = 'rbxassetid://14497402744',
+	['SkyVape/assets/new/targetplayers1.png'] = 'rbxassetid://14497396015',
+	['SkyVape/assets/new/targetplayers2.png'] = 'rbxassetid://14497397862',
+	['SkyVape/assets/new/targetstab.png'] = 'rbxassetid://14497393895',
+	['SkyVape/assets/new/textguiicon.png'] = 'rbxassetid://14368355456',
+	['SkyVape/assets/new/textv4.png'] = 'rbxassetid://14368357095',
+	['SkyVape/assets/new/textvape.png'] = 'rbxassetid://14368358200',
+	['SkyVape/assets/new/utilityicon.png'] = 'rbxassetid://14368359107',
+	['SkyVape/assets/new/vape.png'] = 'rbxassetid://14373395239',
+	['SkyVape/assets/new/warning.png'] = 'rbxassetid://14368361552',
+	['SkyVape/assets/new/worldicon.png'] = 'rbxassetid://14368362492'
 }
 
 local isfile = isfile or function(file)
@@ -149,7 +149,7 @@ local function addBlur(parent, notif)
 	blur.Size = UDim2.new(1, 89, 1, 52)
 	blur.Position = UDim2.fromOffset(-48, -31)
 	blur.BackgroundTransparency = 1
-	blur.Image = getcustomasset('catrewrite/assets/new/'..(notif and 'blurnotif' or 'blur')..'.png')
+	blur.Image = getcustomasset('SkyVape/assets/new/'..(notif and 'blurnotif' or 'blur')..'.png')
 	blur.ScaleType = Enum.ScaleType.Slice
 	blur.SliceCenter = Rect.new(52, 31, 261, 502)
 	blur.Parent = parent
@@ -173,7 +173,7 @@ local function addCloseButton(parent, offset)
 	close.BackgroundColor3 = Color3.new(1, 1, 1)
 	close.BackgroundTransparency = 1
 	close.AutoButtonColor = false
-	close.Image = getcustomasset('catrewrite/assets/new/close.png')
+	close.Image = getcustomasset('SkyVape/assets/new/close.png')
 	close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 	close.ImageTransparency = 0.5
 	close.Parent = parent
@@ -325,7 +325,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		createDownloader(path)
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('catrewrite/profiles/commit.txt')..'/'..select(1, path:gsub('catrewrite/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('SkyVape/profiles/commit.txt')..'/'..select(1, path:gsub('SkyVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -370,8 +370,8 @@ local function loadJson(path)
 	return suc and type(res) == 'table' and res or nil
 end
 
-downloadFile('catrewrite/profiles/features.json')
-local newModules = loadJson('catrewrite/profiles/features.json') or {}
+downloadFile('SkyVape/profiles/features.json')
+local newModules = loadJson('SkyVape/profiles/features.json') or {}
 local function makeDraggable(gui, window)
 	gui.InputBegan:Connect(function(inputObj)
 		if window and not window.Visible then return end
@@ -424,7 +424,7 @@ local function removeTags(str)
 end
 
 do
-	local res = isfile('catrewrite/profiles/color.txt') and loadJson('catrewrite/profiles/color.txt')
+	local res = isfile('SkyVape/profiles/color.txt') and loadJson('SkyVape/profiles/color.txt')
 	if res then
 		uipallet.Main = res.Main and Color3.fromRGB(unpack(res.Main)) or uipallet.Main
 		uipallet.Text = res.Text and Color3.fromRGB(unpack(res.Text)) or uipallet.Text
@@ -711,7 +711,7 @@ components = {
 		preview.Size = UDim2.fromOffset(12, 12)
 		preview.Position = UDim2.new(1, -22, 0, 10)
 		preview.BackgroundTransparency = 1
-		preview.Image = getcustomasset('catrewrite/assets/new/colorpreview.png')
+		preview.Image = getcustomasset('SkyVape/assets/new/colorpreview.png')
 		preview.ImageColor3 = Color3.fromHSV(optionapi.Hue, optionapi.Sat, optionapi.Value)
 		preview.ImageTransparency = 1 - optionapi.Opacity
 		preview.Parent = slider
@@ -727,7 +727,7 @@ components = {
 		expand.Size = UDim2.fromOffset(9, 5)
 		expand.Position = UDim2.fromOffset(4, 4)
 		expand.BackgroundTransparency = 1
-		expand.Image = getcustomasset('catrewrite/assets/new/expandicon.png')
+		expand.Image = getcustomasset('SkyVape/assets/new/expandicon.png')
 		expand.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		expand.Parent = expandbutton
 		local rainbow = Instance.new('TextButton')
@@ -740,17 +740,17 @@ components = {
 		local rainbow1 = Instance.new('ImageLabel')
 		rainbow1.Size = UDim2.fromOffset(12, 12)
 		rainbow1.BackgroundTransparency = 1
-		rainbow1.Image = getcustomasset('catrewrite/assets/new/rainbow_1.png')
+		rainbow1.Image = getcustomasset('SkyVape/assets/new/rainbow_1.png')
 		rainbow1.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		rainbow1.Parent = rainbow
 		local rainbow2 = rainbow1:Clone()
-		rainbow2.Image = getcustomasset('catrewrite/assets/new/rainbow_2.png')
+		rainbow2.Image = getcustomasset('SkyVape/assets/new/rainbow_2.png')
 		rainbow2.Parent = rainbow
 		local rainbow3 = rainbow1:Clone()
-		rainbow3.Image = getcustomasset('catrewrite/assets/new/rainbow_3.png')
+		rainbow3.Image = getcustomasset('SkyVape/assets/new/rainbow_3.png')
 		rainbow3.Parent = rainbow
 		local rainbow4 = rainbow1:Clone()
-		rainbow4.Image = getcustomasset('catrewrite/assets/new/rainbow_4.png')
+		rainbow4.Image = getcustomasset('SkyVape/assets/new/rainbow_4.png')
 		rainbow4.Parent = rainbow
 		local knobholder = Instance.new('Frame')
 		knobholder.Name = 'Knob'
@@ -1015,7 +1015,7 @@ components = {
 		arrow.Size = UDim2.fromOffset(4, 8)
 		arrow.Position = UDim2.new(1, -17, 0, 11)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('catrewrite/assets/new/expandright.png')
+		arrow.Image = getcustomasset('SkyVape/assets/new/expandright.png')
 		arrow.ImageColor3 = Color3.fromRGB(140, 140, 140)
 		arrow.Rotation = 90
 		arrow.Parent = button
@@ -1426,7 +1426,7 @@ components = {
 		icon.Size = UDim2.fromOffset(18, 12)
 		icon.Position = UDim2.fromOffset(10, 15)
 		icon.BackgroundTransparency = 1
-		icon.Image = getcustomasset('catrewrite/assets/new/targetstab.png')
+		icon.Image = getcustomasset('SkyVape/assets/new/targetstab.png')
 		icon.Parent = window
 		local title = Instance.new('TextLabel')
 		title.Name = 'Title'
@@ -1488,20 +1488,20 @@ components = {
 		
 		optionapi.Players = components.TargetsButton({
 			Position = UDim2.fromOffset(11, 45),
-			Icon = getcustomasset('catrewrite/assets/new/targetplayers1.png'),
+			Icon = getcustomasset('SkyVape/assets/new/targetplayers1.png'),
 			IconSize = UDim2.fromOffset(15, 16),
 			IconParent = tool,
-			ToolIcon = getcustomasset('catrewrite/assets/new/targetplayers2.png'),
+			ToolIcon = getcustomasset('SkyVape/assets/new/targetplayers2.png'),
 			ToolSize = UDim2.fromOffset(11, 12),
 			Tooltip = 'Players',
 			Function = optionsettings.Function
 		}, window, tool)
 		optionapi.NPCs = components.TargetsButton({
 			Position = UDim2.fromOffset(112, 45),
-			Icon = getcustomasset('catrewrite/assets/new/targetnpc1.png'),
+			Icon = getcustomasset('SkyVape/assets/new/targetnpc1.png'),
 			IconSize = UDim2.fromOffset(12, 16),
 			IconParent = tool,
-			ToolIcon = getcustomasset('catrewrite/assets/new/targetnpc2.png'),
+			ToolIcon = getcustomasset('SkyVape/assets/new/targetnpc2.png'),
 			ToolSize = UDim2.fromOffset(9, 12),
 			Tooltip = 'NPCs',
 			Function = optionsettings.Function
@@ -1785,7 +1785,7 @@ components = {
 		buttonicon.Size = UDim2.fromOffset(14, 12)
 		buttonicon.Position = UDim2.fromOffset(10, 14)
 		buttonicon.BackgroundTransparency = 1
-		buttonicon.Image = optionsettings.Icon or getcustomasset('catrewrite/assets/new/allowedicon.png')
+		buttonicon.Image = optionsettings.Icon or getcustomasset('SkyVape/assets/new/allowedicon.png')
 		buttonicon.Parent = button
 		local buttontitle = Instance.new('TextLabel')
 		buttontitle.Name = 'Title'
@@ -1831,7 +1831,7 @@ components = {
 		icon.Size = optionsettings.TabSize or UDim2.fromOffset(19, 16)
 		icon.Position = UDim2.fromOffset(10, 13)
 		icon.BackgroundTransparency = 1
-		icon.Image = optionsettings.Tab or getcustomasset('catrewrite/assets/new/allowedtab.png')
+		icon.Image = optionsettings.Tab or getcustomasset('SkyVape/assets/new/allowedtab.png')
 		icon.Parent = window
 		local title = Instance.new('TextLabel')
 		title.Name = 'Title'
@@ -1874,7 +1874,7 @@ components = {
 		addbutton.Size = UDim2.fromOffset(16, 16)
 		addbutton.Position = UDim2.new(1, -26, 0, 8)
 		addbutton.BackgroundTransparency = 1
-		addbutton.Image = getcustomasset('catrewrite/assets/new/add.png')
+		addbutton.Image = getcustomasset('SkyVape/assets/new/add.png')
 		addbutton.ImageColor3 = optionsettings.Color
 		addbutton.ImageTransparency = 0.3
 		addbutton.Parent = addbkg
@@ -1978,7 +1978,7 @@ components = {
 				close.BackgroundColor3 = Color3.new(1, 1, 1)
 				close.BackgroundTransparency = 1
 				close.AutoButtonColor = false
-				close.Image = getcustomasset('catrewrite/assets/new/closemini.png')
+				close.Image = getcustomasset('SkyVape/assets/new/closemini.png')
 				close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 				close.ImageTransparency = 0.5
 				close.Parent = object
@@ -2285,7 +2285,7 @@ components = {
 		knob.Position = UDim2.fromScale(0.5, 0.5)
 		knob.AnchorPoint = Vector2.new(0.5, 0.5)
 		knob.BackgroundTransparency = 1
-		knob.Image = getcustomasset('catrewrite/assets/new/range.png')
+		knob.Image = getcustomasset('SkyVape/assets/new/range.png')
 		knob.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
 		knob.Parent = knobholder
 		local knobholdermax = knobholder:Clone()
@@ -2298,7 +2298,7 @@ components = {
 		arrow.Size = UDim2.fromOffset(12, 6)
 		arrow.Position = UDim2.new(1, -56, 0, 10)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('catrewrite/assets/new/rangearrow.png')
+		arrow.Image = getcustomasset('SkyVape/assets/new/rangearrow.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.14)
 		arrow.Parent = slider
 		optionsettings.Function = optionsettings.Function or function() end
@@ -2510,7 +2510,7 @@ function mainapi:CreateGUI()
 	logo.Size = UDim2.fromOffset(62, 18)
 	logo.Position = UDim2.fromOffset(11, 10)
 	logo.BackgroundTransparency = 1
-	logo.Image = getcustomasset('catrewrite/assets/new/guivape.png')
+	logo.Image = getcustomasset('SkyVape/assets/new/guivape.png')
 	logo.ImageColor3 = select(3, uipallet.Main:ToHSV()) > 0.5 and uipallet.Text or Color3.new(1, 1, 1)
 	logo.Parent = window
 	local logov4 = Instance.new('ImageLabel')
@@ -2518,7 +2518,7 @@ function mainapi:CreateGUI()
 	logov4.Size = UDim2.fromOffset(28, 16)
 	logov4.Position = UDim2.new(1, 1, 0, 1)
 	logov4.BackgroundTransparency = 1
-	logov4.Image = getcustomasset('catrewrite/assets/new/guiv4.png')
+	logov4.Image = getcustomasset('SkyVape/assets/new/guiv4.png')
 	logov4.Parent = logo
 	local children = Instance.new('Frame')
 	children.Name = 'Children'
@@ -2542,14 +2542,14 @@ function mainapi:CreateGUI()
 	settingsicon.Size = UDim2.fromOffset(14, 14)
 	settingsicon.Position = UDim2.fromOffset(15, 12)
 	settingsicon.BackgroundTransparency = 1
-	settingsicon.Image = getcustomasset('catrewrite/assets/new/guisettings.png')
+	settingsicon.Image = getcustomasset('SkyVape/assets/new/guisettings.png')
 	settingsicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	settingsicon.Parent = settingsbutton
 	local discordbutton = Instance.new('ImageButton')
 	discordbutton.Size = UDim2.fromOffset(16, 16)
 	discordbutton.Position = UDim2.new(1, -56, 0, 11)
 	discordbutton.BackgroundTransparency = 1
-	discordbutton.Image = getcustomasset('catrewrite/assets/new/discord.png')
+	discordbutton.Image = getcustomasset('SkyVape/assets/new/discord.png')
 	discordbutton.Parent = window
 	addTooltip(discordbutton, 'Join discord')
 	local settingspane = Instance.new('TextButton')
@@ -2576,7 +2576,7 @@ function mainapi:CreateGUI()
 	back.Size = UDim2.fromOffset(16, 16)
 	back.Position = UDim2.fromOffset(11, 13)
 	back.BackgroundTransparency = 1
-	back.Image = getcustomasset('catrewrite/assets/new/back.png')
+	back.Image = getcustomasset('SkyVape/assets/new/back.png')
 	back.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	back.Parent = settingspane
 	local settingsversion = Instance.new('TextLabel')
@@ -2585,7 +2585,7 @@ function mainapi:CreateGUI()
 	settingsversion.Position = UDim2.new(0, 0, 1, -16)
 	settingsversion.BackgroundTransparency = 1
 	settingsversion.Text = 'Vape '..mainapi.Version..' '..(
-		isfile('catrewrite/profiles/commit.txt') and readfile('catrewrite/profiles/commit.txt'):sub(1, 6) or ''
+		isfile('SkyVape/profiles/commit.txt') and readfile('SkyVape/profiles/commit.txt'):sub(1, 6) or ''
 	)..' '
 	settingsversion.TextColor3 = color.Dark(uipallet.Text, 0.43)
 	settingsversion.TextXAlignment = Enum.TextXAlignment.Right
@@ -2639,7 +2639,7 @@ function mainapi:CreateGUI()
 		icon.Size = UDim2.fromOffset(12, 12)
 		icon.Position = UDim2.new(0.5, -6, 0, 5)
 		icon.BackgroundTransparency = 1
-		icon.Image = getcustomasset('catrewrite/assets/new/bind.png')
+		icon.Image = getcustomasset('SkyVape/assets/new/bind.png')
 		icon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		icon.Parent = bind
 		local label = Instance.new('TextLabel')
@@ -2672,13 +2672,13 @@ function mainapi:CreateGUI()
 		bind.MouseEnter:Connect(function()
 			label.Visible = false
 			icon.Visible = not label.Visible
-			icon.Image = getcustomasset('catrewrite/assets/new/edit.png')
+			icon.Image = getcustomasset('SkyVape/assets/new/edit.png')
 			icon.ImageColor3 = color.Dark(uipallet.Text, 0.16)
 		end)
 		bind.MouseLeave:Connect(function()
 			label.Visible = true
 			icon.Visible = not label.Visible
-			icon.Image = getcustomasset('catrewrite/assets/new/bind.png')
+			icon.Image = getcustomasset('SkyVape/assets/new/bind.png')
 			icon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		end)
 		bind.MouseButton1Click:Connect(function()
@@ -2739,7 +2739,7 @@ function mainapi:CreateGUI()
 		arrow.Size = UDim2.fromOffset(4, 8)
 		arrow.Position = UDim2.new(1, -20, 0, 16)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('catrewrite/assets/new/expandright.png')
+		arrow.Image = getcustomasset('SkyVape/assets/new/expandright.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		arrow.Parent = button
 		optionapi.Name = categorysettings.Name
@@ -2801,7 +2801,7 @@ function mainapi:CreateGUI()
 		button.Position = UDim2.new(1, -29, 0, 7)
 		button.BackgroundTransparency = 1
 		button.AutoButtonColor = false
-		button.Image = getcustomasset('catrewrite/assets/new/overlaysicon.png')
+		button.Image = getcustomasset('SkyVape/assets/new/overlaysicon.png')
 		button.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		button.Parent = bar
 		addCorner(button, UDim.new(1, 0))
@@ -2828,7 +2828,7 @@ function mainapi:CreateGUI()
 		icon.Size = UDim2.fromOffset(14, 12)
 		icon.Position = UDim2.fromOffset(10, 13)
 		icon.BackgroundTransparency = 1
-		icon.Image = getcustomasset('catrewrite/assets/new/overlaystab.png')
+		icon.Image = getcustomasset('SkyVape/assets/new/overlaystab.png')
 		icon.ImageColor3 = uipallet.Text
 		icon.Parent = window
 		local title = Instance.new('TextLabel')
@@ -3020,7 +3020,7 @@ function mainapi:CreateGUI()
 		arrow.Size = UDim2.fromOffset(4, 8)
 		arrow.Position = UDim2.new(1, -20, 0, 16)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('catrewrite/assets/new/expandright.png')
+		arrow.Image = getcustomasset('SkyVape/assets/new/expandright.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		arrow.Parent = button
 		local settingspane = Instance.new('TextButton')
@@ -3047,7 +3047,7 @@ function mainapi:CreateGUI()
 		back.Size = UDim2.fromOffset(16, 16)
 		back.Position = UDim2.fromOffset(11, 13)
 		back.BackgroundTransparency = 1
-		back.Image = getcustomasset('catrewrite/assets/new/back.png')
+		back.Image = getcustomasset('SkyVape/assets/new/back.png')
 		back.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		back.Parent = settingspane
 		addCorner(settingspane)
@@ -3295,7 +3295,7 @@ function mainapi:CreateGUI()
 		preview.Size = UDim2.fromOffset(12, 12)
 		preview.Position = UDim2.new(1, -22, 0, 10)
 		preview.BackgroundTransparency = 1
-		preview.Image = getcustomasset('catrewrite/assets/new/colorpreview.png')
+		preview.Image = getcustomasset('SkyVape/assets/new/colorpreview.png')
 		preview.ImageColor3 = Color3.fromHSV(optionapi.Hue, 1, 1)
 		preview.Parent = slider
 		local valuebox = Instance.new('TextBox')
@@ -3323,7 +3323,7 @@ function mainapi:CreateGUI()
 		expandicon.Size = UDim2.fromOffset(9, 5)
 		expandicon.Position = UDim2.fromOffset(4, 4)
 		expandicon.BackgroundTransparency = 1
-		expandicon.Image = getcustomasset('catrewrite/assets/new/expandicon.png')
+		expandicon.Image = getcustomasset('SkyVape/assets/new/expandicon.png')
 		expandicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		expandicon.Parent = expandbutton
 		local rainbow = Instance.new('TextButton')
@@ -3336,24 +3336,24 @@ function mainapi:CreateGUI()
 		local rainbow1 = Instance.new('ImageLabel')
 		rainbow1.Size = UDim2.fromOffset(12, 12)
 		rainbow1.BackgroundTransparency = 1
-		rainbow1.Image = getcustomasset('catrewrite/assets/new/rainbow_1.png')
+		rainbow1.Image = getcustomasset('SkyVape/assets/new/rainbow_1.png')
 		rainbow1.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		rainbow1.Parent = rainbow
 		local rainbow2 = rainbow1:Clone()
-		rainbow2.Image = getcustomasset('catrewrite/assets/new/rainbow_2.png')
+		rainbow2.Image = getcustomasset('SkyVape/assets/new/rainbow_2.png')
 		rainbow2.Parent = rainbow
 		local rainbow3 = rainbow1:Clone()
-		rainbow3.Image = getcustomasset('catrewrite/assets/new/rainbow_3.png')
+		rainbow3.Image = getcustomasset('SkyVape/assets/new/rainbow_3.png')
 		rainbow3.Parent = rainbow
 		local rainbow4 = rainbow1:Clone()
-		rainbow4.Image = getcustomasset('catrewrite/assets/new/rainbow_4.png')
+		rainbow4.Image = getcustomasset('SkyVape/assets/new/rainbow_4.png')
 		rainbow4.Parent = rainbow
 		local knob = Instance.new('ImageLabel')
 		knob.Name = 'Knob'
 		knob.Size = UDim2.fromOffset(26, 12)
 		knob.Position = UDim2.fromOffset(slidercolorpos[4] - 3, -5)
 		knob.BackgroundTransparency = 1
-		knob.Image = getcustomasset('catrewrite/assets/new/guislider.png')
+		knob.Image = getcustomasset('SkyVape/assets/new/guislider.png')
 		knob.ImageColor3 = slidercolors[4]
 		knob.Parent = holder
 		optionsettings.Function = optionsettings.Function or function() end
@@ -3370,8 +3370,8 @@ function mainapi:CreateGUI()
 			ColorSequenceKeypoint.new(0, Color3.fromHSV(0, 0, 0)),
 			ColorSequenceKeypoint.new(1, Color3.fromHSV(optionapi.Hue, optionapi.Sat, 1))
 		}))
-		local normalknob = getcustomasset('catrewrite/assets/new/guislider.png')
-		local rainbowknob = getcustomasset('catrewrite/assets/new/guisliderrain.png')
+		local normalknob = getcustomasset('SkyVape/assets/new/guislider.png')
+		local rainbowknob = getcustomasset('SkyVape/assets/new/guisliderrain.png')
 		local rainbowthread
 
 		function optionapi:Save(tab)
@@ -3694,7 +3694,7 @@ function mainapi:CreateCategory(categorysettings)
 	arrow.Size = UDim2.fromOffset(9, 4)
 	arrow.Position = UDim2.fromOffset(20, 18)
 	arrow.BackgroundTransparency = 1
-	arrow.Image = getcustomasset('catrewrite/assets/new/expandup.png')
+	arrow.Image = getcustomasset('SkyVape/assets/new/expandup.png')
 	arrow.ImageColor3 = Color3.fromRGB(140, 140, 140)
 	arrow.Rotation = 180
 	arrow.Parent = arrowbutton
@@ -3824,7 +3824,7 @@ function mainapi:CreateCategory(categorysettings)
 		bindicon.Size = UDim2.fromOffset(12, 12)
 		bindicon.Position = UDim2.new(0.5, -6, 0, 5)
 		bindicon.BackgroundTransparency = 1
-		bindicon.Image = getcustomasset('catrewrite/assets/new/bind.png')
+		bindicon.Image = getcustomasset('SkyVape/assets/new/bind.png')
 		bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		bindicon.Parent = bind
 		local bindtext = Instance.new('TextLabel')
@@ -3842,7 +3842,7 @@ function mainapi:CreateCategory(categorysettings)
 		bindcover.Size = UDim2.fromOffset(154, 40)
 		bindcover.BackgroundTransparency = 1
 		bindcover.Visible = false
-		bindcover.Image = getcustomasset('catrewrite/assets/new/bindbkg.png')
+		bindcover.Image = getcustomasset('SkyVape/assets/new/bindbkg.png')
 		bindcover.ScaleType = Enum.ScaleType.Slice
 		bindcover.SliceCenter = Rect.new(0, 0, 141, 40)
 		bindcover.Parent = modulebutton
@@ -3868,7 +3868,7 @@ function mainapi:CreateCategory(categorysettings)
 		dots.Size = UDim2.fromOffset(3, 16)
 		dots.Position = UDim2.fromOffset(4, 12)
 		dots.BackgroundTransparency = 1
-		dots.Image = getcustomasset('catrewrite/assets/new/dots.png')
+		dots.Image = getcustomasset('SkyVape/assets/new/dots.png')
 		dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		dots.Parent = dotsbutton
 		modulechildren.Name = modulesettings.Name..'Children'
@@ -3955,13 +3955,13 @@ function mainapi:CreateCategory(categorysettings)
 		bind.MouseEnter:Connect(function()
 			bindtext.Visible = false
 			bindicon.Visible = not bindtext.Visible
-			bindicon.Image = getcustomasset('catrewrite/assets/new/edit.png')
+			bindicon.Image = getcustomasset('SkyVape/assets/new/edit.png')
 			if not moduleapi.Enabled then bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.16) end
 		end)
 		bind.MouseLeave:Connect(function()
 			bindtext.Visible = #moduleapi.Bind > 0
 			bindicon.Visible = not bindtext.Visible
-			bindicon.Image = getcustomasset('catrewrite/assets/new/bind.png')
+			bindicon.Image = getcustomasset('SkyVape/assets/new/bind.png')
 			if not moduleapi.Enabled then
 				bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 			end
@@ -4203,7 +4203,7 @@ function mainapi:CreateOverlay(categorysettings)
 	pin.Position = UDim2.new(1, -47, 0, 12)
 	pin.BackgroundTransparency = 1
 	pin.AutoButtonColor = false
-	pin.Image = getcustomasset('catrewrite/assets/new/pin.png')
+	pin.Image = getcustomasset('SkyVape/assets/new/pin.png')
 	pin.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 	pin.Parent = window
 	local dotsbutton = Instance.new('TextButton')
@@ -4218,7 +4218,7 @@ function mainapi:CreateOverlay(categorysettings)
 	dots.Size = UDim2.fromOffset(3, 16)
 	dots.Position = UDim2.fromOffset(4, 12)
 	dots.BackgroundTransparency = 1
-	dots.Image = getcustomasset('catrewrite/assets/new/dots.png')
+	dots.Image = getcustomasset('SkyVape/assets/new/dots.png')
 	dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	dots.Parent = dotsbutton
 	local customchildren = Instance.new('Frame')
@@ -4388,7 +4388,7 @@ function mainapi:CreateCategoryList(categorysettings)
 	arrow.Size = UDim2.fromOffset(9, 4)
 	arrow.Position = UDim2.fromOffset(20, 19)
 	arrow.BackgroundTransparency = 1
-	arrow.Image = getcustomasset('catrewrite/assets/new/expandup.png')
+	arrow.Image = getcustomasset('SkyVape/assets/new/expandup.png')
 	arrow.ImageColor3 = Color3.fromRGB(140, 140, 140)
 	arrow.Rotation = 180
 	arrow.Parent = arrowbutton
@@ -4414,7 +4414,7 @@ function mainapi:CreateCategoryList(categorysettings)
 	settings.Position = UDim2.new(1, -52, 0, 13)
 	settings.BackgroundTransparency = 1
 	settings.AutoButtonColor = false
-	settings.Image = getcustomasset('catrewrite/assets/new/customsettings.png')
+	settings.Image = getcustomasset('SkyVape/assets/new/customsettings.png')
 	settings.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 	settings.Parent = window
 	local divider = Instance.new('Frame')
@@ -4464,7 +4464,7 @@ function mainapi:CreateCategoryList(categorysettings)
 	addbutton.Size = UDim2.fromOffset(16, 16)
 	addbutton.Position = UDim2.new(1, -26, 0, 8)
 	addbutton.BackgroundTransparency = 1
-	addbutton.Image = getcustomasset('catrewrite/assets/new/add.png')
+	addbutton.Image = getcustomasset('SkyVape/assets/new/add.png')
 	addbutton.ImageColor3 = categorysettings.Color
 	addbutton.ImageTransparency = 0.3
 	addbutton.Parent = addbkg
@@ -4481,8 +4481,8 @@ function mainapi:CreateCategoryList(categorysettings)
 				if ind then
 					if val ~= 'default' then
 						table.remove(mainapi.Profiles, ind)
-						if isfile('catrewrite/profiles/'..val..mainapi.Place..'.txt') and delfile then
-							delfile('catrewrite/profiles/'..val..mainapi.Place..'.txt')
+						if isfile('SkyVape/profiles/'..val..mainapi.Place..'.txt') and delfile then
+							delfile('SkyVape/profiles/'..val..mainapi.Place..'.txt')
 						end
 					end
 				else
@@ -4548,7 +4548,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				dots.Size = UDim2.fromOffset(3, 16)
 				dots.Position = UDim2.fromOffset(10, 9)
 				dots.BackgroundTransparency = 1
-				dots.Image = getcustomasset('catrewrite/assets/new/dots.png')
+				dots.Image = getcustomasset('SkyVape/assets/new/dots.png')
 				dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 				dots.Parent = dotsbutton
 				local bind = Instance.new('TextButton')
@@ -4569,7 +4569,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bindicon.Size = UDim2.fromOffset(12, 12)
 				bindicon.Position = UDim2.new(0.5, -6, 0, 5)
 				bindicon.BackgroundTransparency = 1
-				bindicon.Image = getcustomasset('catrewrite/assets/new/bind.png')
+				bindicon.Image = getcustomasset('SkyVape/assets/new/bind.png')
 				bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 				bindicon.Parent = bind
 				local bindtext = Instance.new('TextLabel')
@@ -4585,7 +4585,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bind.MouseEnter:Connect(function()
 					bindtext.Visible = false
 					bindicon.Visible = not bindtext.Visible
-					bindicon.Image = getcustomasset('catrewrite/assets/new/edit.png')
+					bindicon.Image = getcustomasset('SkyVape/assets/new/edit.png')
 					if v.Name ~= mainapi.Profile then
 						bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.16)
 					end
@@ -4593,7 +4593,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bind.MouseLeave:Connect(function()
 					bindtext.Visible = #v.Bind > 0
 					bindicon.Visible = not bindtext.Visible
-					bindicon.Image = getcustomasset('catrewrite/assets/new/bind.png')
+					bindicon.Image = getcustomasset('SkyVape/assets/new/bind.png')
 					if v.Name ~= mainapi.Profile then
 						bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 					end
@@ -4603,7 +4603,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bindcover.Size = UDim2.fromOffset(154, 33)
 				bindcover.BackgroundTransparency = 1
 				bindcover.Visible = false
-				bindcover.Image = getcustomasset('catrewrite/assets/new/bindbkg.png')
+				bindcover.Image = getcustomasset('SkyVape/assets/new/bindbkg.png')
 				bindcover.ScaleType = Enum.ScaleType.Slice
 				bindcover.SliceCenter = Rect.new(0, 0, 141, 40)
 				bindcover.Parent = object
@@ -4736,7 +4736,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				close.BackgroundColor3 = Color3.new(1, 1, 1)
 				close.BackgroundTransparency = 1
 				close.AutoButtonColor = false
-				close.Image = getcustomasset('catrewrite/assets/new/closemini.png')
+				close.Image = getcustomasset('SkyVape/assets/new/closemini.png')
 				close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 				close.ImageTransparency = 0.5
 				close.Parent = object
@@ -4903,7 +4903,7 @@ function mainapi:CreateSearch()
 	searchicon.Size = UDim2.fromOffset(14, 14)
 	searchicon.Position = UDim2.new(1, -23, 0, 11)
 	searchicon.BackgroundTransparency = 1
-	searchicon.Image = getcustomasset('catrewrite/assets/new/search.png')
+	searchicon.Image = getcustomasset('SkyVape/assets/new/search.png')
 	searchicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	searchicon.Parent = searchbkg
 	local legiticon = Instance.new('ImageButton')
@@ -4911,7 +4911,7 @@ function mainapi:CreateSearch()
 	legiticon.Size = UDim2.fromOffset(29, 16)
 	legiticon.Position = UDim2.fromOffset(8, 11)
 	legiticon.BackgroundTransparency = 1
-	legiticon.Image = getcustomasset('catrewrite/assets/new/legit.png')
+	legiticon.Image = getcustomasset('SkyVape/assets/new/legit.png')
 	legiticon.Parent = searchbkg
 	local legitdivider = Instance.new('Frame')
 	legitdivider.Name = 'LegitDivider'
@@ -5048,7 +5048,7 @@ function mainapi:CreateLegit()
 	icon.Size = UDim2.fromOffset(16, 16)
 	icon.Position = UDim2.fromOffset(18, 13)
 	icon.BackgroundTransparency = 1
-	icon.Image = getcustomasset('catrewrite/assets/new/legittab.png')
+	icon.Image = getcustomasset('SkyVape/assets/new/legittab.png')
 	icon.ImageColor3 = uipallet.Text
 	icon.Parent = window
 	local close = addCloseButton(window)
@@ -5097,7 +5097,7 @@ function mainapi:CreateLegit()
 	searchicon.BackgroundTransparency = 1
 	searchicon.Position = UDim2.new(1, -28, 0, 8)
 	searchicon.Size = UDim2.fromOffset(12, 12)
-	searchicon.Image = getcustomasset('catrewrite/assets/new/search.png')
+	searchicon.Image = getcustomasset('SkyVape/assets/new/search.png')
 	searchicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	searchicon.Parent = searchbox
 	local categorylist = Instance.new('Frame')
@@ -5234,7 +5234,7 @@ function mainapi:CreateLegit()
 		dots.Size = UDim2.fromOffset(2, 12)
 		dots.Position = UDim2.fromOffset(6, 6)
 		dots.BackgroundTransparency = 1
-		dots.Image = getcustomasset('catrewrite/assets/new/dots.png')
+		dots.Image = getcustomasset('SkyVape/assets/new/dots.png')
 		dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		dots.Parent = dotsbutton
 		local shadow = Instance.new('TextButton')
@@ -5271,7 +5271,7 @@ function mainapi:CreateLegit()
 		back.Size = UDim2.fromOffset(16, 16)
 		back.Position = UDim2.fromOffset(11, 13)
 		back.BackgroundTransparency = 1
-		back.Image = getcustomasset('catrewrite/assets/new/back.png')
+		back.Image = getcustomasset('SkyVape/assets/new/back.png')
 		back.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		back.Parent = settingspane
 		addCorner(settingspane)
@@ -5495,7 +5495,7 @@ function mainapi:CreateNotification(title, text, duration, type)
 		notification.Position = UDim2.new(1, 0, 1, -(29 + (78 * i)))
 		notification.ZIndex = 5
 		notification.BackgroundTransparency = 1
-		notification.Image = getcustomasset('catrewrite/assets/new/notification.png')
+		notification.Image = getcustomasset('SkyVape/assets/new/notification.png')
 		notification.ScaleType = Enum.ScaleType.Slice
 		notification.SliceCenter = Rect.new(7, 7, 9, 9)
 		notification.Parent = notifications
@@ -5506,7 +5506,7 @@ function mainapi:CreateNotification(title, text, duration, type)
 		iconshadow.Position = UDim2.fromOffset(-5, -8)
 		iconshadow.ZIndex = 5
 		iconshadow.BackgroundTransparency = 1
-		iconshadow.Image = getcustomasset('catrewrite/assets/new/'..(type or 'info')..'.png')
+		iconshadow.Image = getcustomasset('SkyVape/assets/new/'..(type or 'info')..'.png')
 		iconshadow.ImageColor3 = Color3.new()
 		iconshadow.ImageTransparency = 0.5
 		iconshadow.Parent = notification
@@ -5583,12 +5583,12 @@ function mainapi:Load(skipgui, profile)
 	local guidata = {}
 	local savecheck = true
 
-	if isfile('catrewrite/profiles/'..game.GameId..'.gui.txt') then
-		guidata = loadJson('catrewrite/profiles/'..game.GameId..'.gui.txt')
+	if isfile('SkyVape/profiles/'..game.GameId..'.gui.txt') then
+		guidata = loadJson('SkyVape/profiles/'..game.GameId..'.gui.txt')
 		if not guidata then
 			guidata = {Categories = {}}
 			self:CreateNotification('Vape', 'Failed to load GUI settings, Try rejoining ur game', 10, 'alert')
-			delfile('catrewrite/profiles/'..game.GameId..'.gui.txt')
+			delfile('SkyVape/profiles/'..game.GameId..'.gui.txt')
 			savecheck = false
 		end
 
@@ -5631,8 +5631,8 @@ function mainapi:Load(skipgui, profile)
 		self.ProfileLabel.Size = UDim2.fromOffset(getfontsize(self.ProfileLabel.Text, self.ProfileLabel.TextSize, self.ProfileLabel.Font).X + 16, 24)
 	end
 
-	if isfile('catrewrite/profiles/'..self.Profile..self.Place..'.txt') then
-		local savedata = loadJson('catrewrite/profiles/'..self.Profile..self.Place..'.txt')
+	if isfile('SkyVape/profiles/'..self.Profile..self.Place..'.txt') then
+		local savedata = loadJson('SkyVape/profiles/'..self.Profile..self.Place..'.txt')
 		if not savedata then
 			savedata = {Categories = {}, Modules = {}, Legit = {}}
 			self:CreateNotification('Vape', 'Failed to load '..self.Profile..' profile.', 10, 'alert')
@@ -5705,7 +5705,7 @@ function mainapi:Load(skipgui, profile)
 	self.Categories.Main.Options.Bind:SetBind(self.Keybind)
 
 	if not inputService.KeyboardEnabled or shared.VapeDeveloper then
-		local hide = isfile('catrewrite/profiles/hide.txt') and readfile('catrewrite/profiles/hide.txt') or nil
+		local hide = isfile('SkyVape/profiles/hide.txt') and readfile('SkyVape/profiles/hide.txt') or nil
 		if hide ~= nil then
 			hide = hide == 'true' and true or false
 		end
@@ -5722,7 +5722,7 @@ function mainapi:Load(skipgui, profile)
 		image.Size = UDim2.fromOffset(22, 22)
 		image.Position = UDim2.fromScale(0.5, 0.5)
 		image.BackgroundTransparency = 1
-		image.Image = getcustomasset('catrewrite/assets/new/vape.png')
+		image.Image = getcustomasset('SkyVape/assets/new/vape.png')
 		image.ImageTransparency = hide and 1 or 0
 		image.Parent = button
 		local buttoncorner = Instance.new('UICorner')
@@ -5753,7 +5753,7 @@ function mainapi:Load(skipgui, profile)
 				Function = function(call)
 					button.BackgroundTransparency = call and 1 or 0.35
 					image.ImageTransparency = call and 1 or 0
-					writefile('catrewrite/profiles/hide.txt', tostring(call))
+					writefile('SkyVape/profiles/hide.txt', tostring(call))
 				end
 			})
 		end
@@ -5831,8 +5831,8 @@ function mainapi:Save(newprofile)
 		}
 	end
 
-	writefile('catrewrite/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
-	writefile('catrewrite/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
+	writefile('SkyVape/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
+	writefile('SkyVape/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
 end
 
 function mainapi:SaveOptions(object, savedoptions)
@@ -6001,43 +6001,43 @@ mainapi:CreateGUI()
 mainapi.Categories.Main:CreateDivider()
 mainapi:CreateCategory({
 	Name = 'Combat',
-	Icon = getcustomasset('catrewrite/assets/new/combaticon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/combaticon.png'),
 	Size = UDim2.fromOffset(13, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Blatant',
-	Icon = getcustomasset('catrewrite/assets/new/blatanticon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/blatanticon.png'),
 	Size = UDim2.fromOffset(14, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Render',
-	Icon = getcustomasset('catrewrite/assets/new/rendericon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/rendericon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Utility',
-	Icon = getcustomasset('catrewrite/assets/new/utilityicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/utilityicon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'World',
-	Icon = getcustomasset('catrewrite/assets/new/worldicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/worldicon.png'),
 	Size = UDim2.fromOffset(14, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Inventory',
-	Icon = getcustomasset('catrewrite/assets/new/inventoryicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/inventoryicon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Minigames',
-	Icon = getcustomasset('catrewrite/assets/new/miniicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/miniicon.png'),
 	Size = UDim2.fromOffset(19, 12)
 })
 if game.GameId == 2619619496 then
 	mainapi:CreateCategory({
 		Name = 'Kits',
-		Icon = getcustomasset('catrewrite/assets/new/friendstab.png'),
+		Icon = getcustomasset('SkyVape/assets/new/friendstab.png'),
 		Size = UDim2.fromOffset(15, 15)
 	})
 end
@@ -6055,7 +6055,7 @@ local friendscolor = {
 }
 local friendssettings = {
 	Name = 'Friends',
-	Icon = getcustomasset('catrewrite/assets/new/friendstab.png'),
+	Icon = getcustomasset('SkyVape/assets/new/friendstab.png'),
 	Size = UDim2.fromOffset(17, 16),
 	Placeholder = 'Roblox username',
 	Color = Color3.fromRGB(5, 134, 105),
@@ -6108,7 +6108,7 @@ mainapi:Clean(friends.ColorUpdate)
 ]]
 local profiles = mainapi:CreateCategoryList({
 	Name = 'Profiles',
-	Icon = getcustomasset('catrewrite/assets/new/profilesicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/profilesicon.png'),
 	Size = UDim2.fromOffset(17, 10),
 	Position = UDim2.fromOffset(12, 16),
 	Placeholder = 'Type name',
@@ -6128,8 +6128,8 @@ profiles:CreateButton({
 			local awesome = `imported ({#mainapi.Profiles + 1})`
 			table.insert(mainapi.Profiles, {Name = awesome, Bind = {}})
 			mainapi:Save(awesome)
-			writefile('catrewrite/profiles/'..awesome..mainapi.Place..'.txt', result.config)
-			writefile('catrewrite/profiles/'..game.GameId..'.gui.txt', result.gui)
+			writefile('SkyVape/profiles/'..awesome..mainapi.Place..'.txt', result.config)
+			writefile('SkyVape/profiles/'..game.GameId..'.gui.txt', result.gui)
 			mainapi:Load(true, awesome)
 		end
 	end
@@ -6141,7 +6141,7 @@ profiles:CreateButton({
 local targets
 targets = mainapi:CreateCategoryList({
 	Name = 'Targets',
-	Icon = getcustomasset('catrewrite/assets/new/friendstab.png'),
+	Icon = getcustomasset('SkyVape/assets/new/friendstab.png'),
 	Size = UDim2.fromOffset(17, 16),
 	Placeholder = 'Roblox username',
 	Function = function()
@@ -6169,14 +6169,14 @@ general:CreateButton({
 	Name = 'Reset current profile',
 	Function = function()
 	mainapi.Save = function() end
-		if isfile('catrewrite/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
-			delfile('catrewrite/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
+		if isfile('SkyVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
+			delfile('SkyVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
 		end
 		shared.vapereload = true
 		if shared.VapeDeveloper then
-			loadstring(readfile('catrewrite/loader.lua'), 'loader')()
+			loadstring(readfile('SkyVape/loader.lua'), 'loader')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('catrewrite/profiles/commit.txt')..'/loader.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('SkyVape/profiles/commit.txt')..'/loader.lua', true))()
 		end
 	end,
 	Tooltip = 'This will set your profile to the default settings of Vape'
@@ -6185,11 +6185,11 @@ general:CreateButton({
 	Name = 'Export to JSON',
 	Function = function()
 		local tab = {}
-		if isfile('catrewrite/profiles/'..mainapi.Profile..mainapi.Place..'.txt') then
-			tab.config = readfile('catrewrite/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
+		if isfile('SkyVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt') then
+			tab.config = readfile('SkyVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
 		end
-		if isfile('catrewrite/profiles/'..game.GameId..'.gui.txt') then
-			tab.gui = readfile('catrewrite/profiles/'..game.GameId..'.gui.txt')
+		if isfile('SkyVape/profiles/'..game.GameId..'.gui.txt') then
+			tab.gui = readfile('SkyVape/profiles/'..game.GameId..'.gui.txt')
 		end
 		tab.game = tostring(mainapi.Place or 'universal'.. game.PlaceId)
 		setclipboard(httpService:JSONEncode(tab))
@@ -6208,9 +6208,9 @@ general:CreateButton({
 	Function = function()
 		shared.vapereload = true
 		if shared.VapeDeveloper then
-			loadstring(readfile('catrewrite/loader.lua'), 'loader')()
+			loadstring(readfile('SkyVape/loader.lua'), 'loader')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('catrewrite/profiles/commit.txt')..'/loader.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('SkyVape/profiles/commit.txt')..'/loader.lua', true))()
 		end
 	end,
 	Tooltip = 'Reloads vape for debugging purposes'
@@ -6322,12 +6322,12 @@ guipane:CreateDropdown({
 	List = inputService.TouchEnabled and {'new', 'old'} or {'new', 'old', 'rise'},
 	Function = function(val, mouse)
 		if mouse then
-			writefile('catrewrite/profiles/gui.txt', val)
+			writefile('SkyVape/profiles/gui.txt', val)
 			shared.vapereload = true
 			if shared.VapeDeveloper then
-				loadstring(readfile('catrewrite/loader.lua'), 'loader')()
+				loadstring(readfile('SkyVape/loader.lua'), 'loader')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('catrewrite/profiles/commit.txt')..'/loader.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/'..readfile('SkyVape/profiles/commit.txt')..'/loader.lua', true))()
 			end
 		end
 	end,
@@ -6441,7 +6441,7 @@ mainapi.Categories.Main:CreateBind()
 
 local textgui = mainapi:CreateOverlay({
 	Name = 'Text GUI',
-	Icon = getcustomasset('catrewrite/assets/new/textguiicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/textguiicon.png'),
 	Size = UDim2.fromOffset(16, 12),
 	Position = UDim2.fromOffset(12, 14),
 	Function = function()
@@ -6575,8 +6575,8 @@ local textguimodules = textgui:CreateToggle({
 textguimoduleslist = textgui:CreateTextList({
 	Name = 'Blacklist',
 	Tooltip = 'Name of module to hide.',
-	Icon = getcustomasset('catrewrite/assets/new/blockedicon.png'),
-	Tab = getcustomasset('catrewrite/assets/new/blockedtab.png'),
+	Icon = getcustomasset('SkyVape/assets/new/blockedicon.png'),
+	Tab = getcustomasset('SkyVape/assets/new/blockedtab.png'),
 	TabSize = UDim2.fromOffset(21, 16),
 	Color = Color3.fromRGB(250, 50, 56),
 	Function = function()
@@ -6653,7 +6653,7 @@ VapeLogo.BackgroundTransparency = 1
 VapeLogo.BorderSizePixel = 0
 VapeLogo.Visible = false
 VapeLogo.BackgroundColor3 = Color3.new()
-VapeLogo.Image = getcustomasset('catrewrite/assets/new/textvape.png')
+VapeLogo.Image = getcustomasset('SkyVape/assets/new/textvape.png')
 VapeLogo.Parent = textgui.Children
 
 local lastside = textgui.Children.AbsolutePosition.X > (gui.AbsoluteSize.X / 2)
@@ -6675,7 +6675,7 @@ VapeLogoV4.Position = UDim2.new(1, 1, 0, 1)
 VapeLogoV4.BackgroundColor3 = Color3.new()
 VapeLogoV4.BackgroundTransparency = 1
 VapeLogoV4.BorderSizePixel = 0
-VapeLogoV4.Image = getcustomasset('catrewrite/assets/new/textv4.png')
+VapeLogoV4.Image = getcustomasset('SkyVape/assets/new/textv4.png')
 VapeLogoV4.Parent = VapeLogo
 local VapeLogoShadow = VapeLogo:Clone()
 VapeLogoShadow.Position = UDim2.fromOffset(1, 1)
@@ -6745,7 +6745,7 @@ local targetinfoobj
 local targetinfobcolor
 targetinfoobj = mainapi:CreateOverlay({
 	Name = 'Target Info',
-	Icon = getcustomasset('catrewrite/assets/new/targetinfoicon.png'),
+	Icon = getcustomasset('SkyVape/assets/new/targetinfoicon.png'),
 	Size = UDim2.fromOffset(14, 14),
 	Position = UDim2.fromOffset(12, 14),
 	CategorySize = 240,
