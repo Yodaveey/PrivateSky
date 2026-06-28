@@ -17,7 +17,7 @@ local isfile = isfile
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/MaxlaserTech/CatV6/' .. readfile('SkyVape/profiles/commit.txt') .. '/' .. select(1, path:gsub('SkyVape/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/Yodaveey/PrivateSky/' .. readfile('SkyVape/profiles/commit.txt') .. '/' .. select(1, path:gsub('SkyVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
