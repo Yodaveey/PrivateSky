@@ -69,6 +69,53 @@ local function downloadFile(path, func)
 	return (func or readfile)(path)
 end
 
+-- Auto-update: check GitHub for the latest commit SHA and wipe stale local files
+local function checkForUpdates()
+	local ok, raw = pcall(function()
+		return game:HttpGet('https://api.github.com/repos/Yodaveey/PrivateSky/commits/main', true)
+	end)
+	if not ok then return end
+
+	local parsed, sha
+	ok, parsed = pcall(function() return httpService:JSONDecode(raw) end)
+	if not ok or not parsed then return end
+	sha = parsed.sha
+	if not sha then return end
+
+	-- Trim to first 40 chars just in case
+	sha = sha:sub(1, 40)
+
+	local localCommit = isfile('SkyVape/profiles/commit.txt') and readfile('SkyVape/profiles/commit.txt') or 'main'
+	localCommit = localCommit:gsub('%s+', '')
+
+	if sha ~= localCommit and localCommit ~= 'main' then
+		-- New version detected — wipe all downloaded lua files so they re-fetch
+		shared.updated = localCommit
+		local folders = {
+			'SkyVape/guis',
+			'SkyVape/games',
+			'SkyVape/libraries',
+		}
+		for _, folder in folders do
+			local ok2, files = pcall(listfiles, folder)
+			if ok2 and files then
+				for _, file in files do
+					if file:find('%.lua$') then
+						local ok3, content = pcall(readfile, file)
+						if ok3 and content:find('This watermark is used to delete') then
+							pcall(delfile, file)
+						end
+					end
+				end
+			end
+		end
+	end
+
+	-- Always save the latest SHA so next time we can compare properly
+	writefile('SkyVape/profiles/commit.txt', sha)
+end
+
+
 local function finishLoading()
 	vape.Init = nil
 	vape:Load()
@@ -138,6 +185,10 @@ end
 if not isfile('SkyVape/profiles/commit.txt') then
 	writefile('SkyVape/profiles/commit.txt', 'main')
 end
+
+-- Check GitHub for a newer commit and wipe stale cached files if found
+checkForUpdates()
+
 
 getgenv().used_init = true
 vape = loadstring(downloadFile('SkyVape/guis/'..gui..'.lua'), 'gui')(license)
